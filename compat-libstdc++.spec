@@ -167,11 +167,11 @@ Conflicts:	compat-libstdc++
 Conflicts:	libstdc++-compat
 
 %description 3.3
-Old, compatibility version of GNU C++ library - from gcc 3.3.3, needed
+Old, compatibility version of GNU C++ library - from gcc 3.3.5, needed
 to run some old C++ applications.
 
 %description 3.3 -l pl
-Stara wersja biblioteki GNU C++ - z gcc 3.3.3, potrzebna dla
+Stara wersja biblioteki GNU C++ - z gcc 3.3.5, potrzebna dla
 kompatybilno¶ci z niektórymi starymi programami w C++.
 
 
