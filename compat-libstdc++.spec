@@ -26,7 +26,7 @@ des outils GNU supplémentaires. Ce package comprend les librairies
 partagées nécessaires à l'exécution d'application C++.
 
 %description -l pl
-Pakiet ten zawiera biblioteki bêd±ce inplementacj± standardowych
+Pakiet ten zawiera biblioteki bêd±ce implementacj± standardowych
 bibliotek C++, znajduj± siê w nim stare biblioteki dynamiczne
 niezbêdne do uruchomienia niektórych starych aplikacji C++.
 
