@@ -1,3 +1,4 @@
+# TODO: add amd64 for gcc3.3
 Summary:	Old versions of GNU C++ library
 Summary(pl):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
