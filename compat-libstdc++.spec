@@ -1,14 +1,14 @@
-# TODO: add amd64 for gcc3.3
 Summary:	Old versions of GNU C++ library
 Summary(pl):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries
-Source0:	libstdc++-compat.tar.gz
-# Source0-md5:	aa2d683eb17f3ee63cf2e264a87ae787
-ExclusiveArch:	alpha %{ix86} ppc sparc
+#Source0:	libstdc++-compat.tar.gz
+Source0:	http://pld-nptl.ds14.agh.edu.pl/libstdc++-compat.tar.gz
+# Source0-md5:	98ab37235f8cf0d20251716dabd40690
+ExclusiveArch:	alpha amd64 %{ix86} ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -186,6 +186,10 @@ install -d $RPM_BUILD_ROOT%{_libdir}
 cp -a alpha/* $RPM_BUILD_ROOT%{_libdir}
 %endif
 
+%ifarch amd64
+cp -a amd64/* $RPM_BUILD_ROOT%{_libdir}
+%endif
+
 %ifarch sparc
 cp -a sparc/* $RPM_BUILD_ROOT%{_libdir}
 %endif
@@ -287,8 +291,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libstdc++.so.4.0.1
 %endif
 
-%ifarch alpha %{ix86} ppc sparc
+%ifarch alpha amd64 %{ix86} ppc sparc
 %files 3.3
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libstdc++.so.5.0.5
+%attr(755,root,root) %{_libdir}/libstdc++.so.5.0.7
 %endif
