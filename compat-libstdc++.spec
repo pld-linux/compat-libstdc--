@@ -2,7 +2,7 @@ Summary:	Old versions of GNU C++ library
 Summary(pl):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat.tar.gz
@@ -240,8 +240,11 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch %{ix86} ppc
 %files 2.10
 %defattr(644,root,root,755)
+%ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so
+%endif 
 %ifarch ppc
+%attr(755,root,root) %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so
 %attr(755,root,root) %{_libdir}/libstdc++-libc6.1-2.so.3
 %endif
 %endif
