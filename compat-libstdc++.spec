@@ -2,11 +2,11 @@ Summary:	Old versions of GNU C++ library
 Summary(pl):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat.tar.gz
-# Source0-md5:	bad4fe86c4f8f7aed5893a6dbcec99c7
+# Source0-md5:	aa2d683eb17f3ee63cf2e264a87ae787
 ExclusiveArch:	alpha %{ix86} ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -157,6 +157,23 @@ to run some old C++ applications.
 Stara wersja biblioteki GNU C++ - z gcc 3.1.x, potrzebna dla
 kompatybilno¶ci z niektórymi starymi programami w C++.
 
+%package 3.3
+Summary:	Old version of GNU C++ library - gcc 3.3
+Summary(pl):	Stara wersja biblioteki GNU C++ - gcc 3.3
+Version:	3.3.3
+Group:		Libraries
+Conflicts:	compat-libstdc++
+Conflicts:	libstdc++-compat
+
+%description 3.3
+Old, compatibility version of GNU C++ library - from gcc 3.3.3, needed
+to run some old C++ applications.
+
+%description 3.3 -l pl
+Stara wersja biblioteki GNU C++ - z gcc 3.3.3, potrzebna dla
+kompatybilno¶ci z niektórymi starymi programami w C++.
+
+
 %prep
 %setup -q -n libstdc++-compat
 
@@ -203,6 +220,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	3.1 -p /sbin/ldconfig
 %postun	3.1 -p /sbin/ldconfig
+
+%post	3.3 -p /sbin/ldconfig
+%postun	3.3 -p /sbin/ldconfig
 
 %ifarch alpha %{ix86}
 %files -n compat-libg++-2.7
@@ -264,4 +284,10 @@ rm -rf $RPM_BUILD_ROOT
 %files 3.1
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.4.0.1
+%endif
+
+%ifarch alpha %{ix86} ppc sparc
+%files 3.3
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libstdc++.so.5.0.5
 %endif
