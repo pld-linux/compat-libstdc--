@@ -161,7 +161,7 @@ kompatybilno¶ci z niektórymi starymi programami w C++.
 %package 3.3
 Summary:	Old version of GNU C++ library - gcc 3.3
 Summary(pl):	Stara wersja biblioteki GNU C++ - gcc 3.3
-Version:	3.3.3
+Version:	3.3.5
 Group:		Libraries
 Conflicts:	compat-libstdc++
 Conflicts:	libstdc++-compat
