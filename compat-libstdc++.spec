@@ -9,7 +9,8 @@ Group:		Libraries
 Source0:	http://pld-nptl.ds14.agh.edu.pl/libstdc++-compat.tar.gz
 # Source0-md5:	98ab37235f8cf0d20251716dabd40690
 BuildRequires:	rpmbuild(macros) >= 1.213
-ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
+# only 3.3 on %{x8664}, so not for Ac
+ExclusiveArch:	%{ix86} alpha ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
