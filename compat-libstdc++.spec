@@ -1,5 +1,5 @@
 Summary:	Old versions of GNU C++ library
-Summary(pl):	Stare wersje bibliotek GNU C++
+Summary(pl.UTF-8):   Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
 Release:	4
@@ -17,28 +17,28 @@ This is the GNU implementation of the standard C++ libraries, along
 with additional GNU tools. This package includes the compatibility
 shared libraries necessary to run some old C++ applications.
 
-%description -l de
+%description -l de.UTF-8
 Dies ist die GNU-Implementierung der Standard-C++-Libraries mit
-weiteren GNU-Tools. Dieses Paket enthält die zum Ausführen von
+weiteren GNU-Tools. Dieses Paket enthÃ¤lt die zum AusfÃ¼hren von
 C++-Anwendungen erforderlichen gemeinsam genutzten Libraries.
 
-%description -l fr
-Ceci est l'implémentation GNU des librairies C++ standard, ainsi que
-des outils GNU supplémentaires. Ce package comprend les librairies
-partagées nécessaires à l'exécution d'application C++.
+%description -l fr.UTF-8
+Ceci est l'implÃ©mentation GNU des librairies C++ standard, ainsi que
+des outils GNU supplÃ©mentaires. Ce package comprend les librairies
+partagÃ©es nÃ©cessaires Ã  l'exÃ©cution d'application C++.
 
-%description -l pl
-Pakiet ten zawiera biblioteki bêd±ce implementacj± standardowych
-bibliotek C++, znajduj± siê w nim stare biblioteki dynamiczne
-niezbêdne do uruchomienia niektórych starych aplikacji C++.
+%description -l pl.UTF-8
+Pakiet ten zawiera biblioteki bÄ™dÄ…ce implementacjÄ… standardowych
+bibliotek C++, znajdujÄ… siÄ™ w nim stare biblioteki dynamiczne
+niezbÄ™dne do uruchomienia niektÃ³rych starych aplikacji C++.
 
-%description -l tr
-Bu paket, standart C++ kitaplýklarýnýn GNU gerçeklemesidir ve C++
-uygulamalarýnýn koþturulmasý için gerekli kitaplýklarý içerir.
+%description -l tr.UTF-8
+Bu paket, standart C++ kitaplÄ±klarÄ±nÄ±n GNU gerÃ§eklemesidir ve C++
+uygulamalarÄ±nÄ±n koÅŸturulmasÄ± iÃ§in gerekli kitaplÄ±klarÄ± iÃ§erir.
 
 %package -n compat-libg++-2.7
 Summary:	Old version of GNU C++ library - libg++ 2.7.x
-Summary(pl):	Stara wersja biblioteki GNU C++ - libg++ 2.7.x
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - libg++ 2.7.x
 Version:	2.7.2.8
 Group:		Libraries
 Obsoletes:	libg++
@@ -49,13 +49,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - libg++ 2.7.x (from gcc
 2.7.x), needed to run some old C++ applications.
 
-%description -n compat-libg++-2.7 -l pl
+%description -n compat-libg++-2.7 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - libg++ 2.7.x (z gcc 2.7.x) potrzebna
-dla kompatybilno¶ci z niektórymi starymi programami w C++.
+dla kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 2.7
 Summary:	Old version of GNU C++ library - 2.7.x
-Summary(pl):	Stara wersja biblioteki GNU C++ - 2.7.x
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - 2.7.x
 Version:	2.7.2.8
 Group:		Libraries
 Conflicts:	compat-libstdc++
@@ -65,13 +65,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - libstdc++ 2.7.x (from
 gcc 2.7.x), needed to run some old C++ applications.
 
-%description 2.7 -l pl
+%description 2.7 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - libstdc++ 2.7.x (z gcc 2.7.x)
-potrzebna dla kompatybilno¶ci z niektórymi starymi programami w C++.
+potrzebna dla kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 2.8
 Summary:	Old version of GNU C++ library - 2.8
-Summary(pl):	Stara wersja biblioteki GNU C++ - 2.8
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - 2.8
 Version:	2.8.0
 Group:		Libraries
 %ifarch ppc
@@ -84,13 +84,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - libstdc++ 2.8.0 (from
 gcc 2.8.x), needed to run some old C++ applications.
 
-%description 2.8 -l pl
+%description 2.8 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - libstdc++ 2.8.0 (z gcc 2.8.x)
-potrzebna dla kompatybilno¶ci z niektórymi starymi programami w C++.
+potrzebna dla kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 2.9
 Summary:	Old version of GNU C++ library - 2.9
-Summary(pl):	Stara wersja biblioteki GNU C++ - 2.9
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - 2.9
 Version:	2.9.0
 Group:		Libraries
 Conflicts:	compat-libstdc++
@@ -100,13 +100,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - libstdc++ 2.9.0 (from
 egcs 1.x-2.9x?), needed to run some old C++ applications.
 
-%description 2.9 -l pl
+%description 2.9 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - libstdc++ 2.9.0 (z egcs 1.x-2.9x?)
-potrzebna dla kompatybilno¶ci z niektórymi starymi programami w C++.
+potrzebna dla kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 2.10
 Summary:	Old version of GNU C++ library - 2.10
-Summary(pl):	Stara wersja biblioteki GNU C++ - 2.10
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - 2.10
 Version:	2.10.0
 Group:		Libraries
 %ifarch ppc
@@ -119,13 +119,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - libstdc++ 2.10.0 (from
 gcc 2.95.x), needed to run some old C++ applications.
 
-%description 2.10 -l pl
+%description 2.10 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - libstdc++ 2.10.0 (z gcc 2.95.x)
-potrzebna dla kompatybilno¶ci z niektórymi starymi programami w C++.
+potrzebna dla kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 3.0
 Summary:	Old version of GNU C++ library - gcc 3.0
-Summary(pl):	Stara wersja biblioteki GNU C++ - gcc 3.0
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - gcc 3.0
 %ifarch alpha
 Version:	3.0.2
 %else
@@ -139,13 +139,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - from gcc 3.0.x, needed
 to run some old C++ applications.
 
-%description 3.0 -l pl
+%description 3.0 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - z gcc 3.0.x, potrzebna dla
-kompatybilno¶ci z niektórymi starymi programami w C++.
+kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 3.1
 Summary:	Old version of GNU C++ library - gcc 3.1
-Summary(pl):	Stara wersja biblioteki GNU C++ - gcc 3.1
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - gcc 3.1
 Version:	3.1.1
 Group:		Libraries
 Conflicts:	compat-libstdc++
@@ -155,13 +155,13 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - from gcc 3.1.x, needed
 to run some old C++ applications.
 
-%description 3.1 -l pl
+%description 3.1 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - z gcc 3.1.x, potrzebna dla
-kompatybilno¶ci z niektórymi starymi programami w C++.
+kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 %package 3.3
 Summary:	Old version of GNU C++ library - gcc 3.3
-Summary(pl):	Stara wersja biblioteki GNU C++ - gcc 3.3
+Summary(pl.UTF-8):   Stara wersja biblioteki GNU C++ - gcc 3.3
 Version:	3.3.5
 Group:		Libraries
 Conflicts:	compat-libstdc++
@@ -171,9 +171,9 @@ Conflicts:	libstdc++-compat
 Old, compatibility version of GNU C++ library - from gcc 3.3.5, needed
 to run some old C++ applications.
 
-%description 3.3 -l pl
+%description 3.3 -l pl.UTF-8
 Stara wersja biblioteki GNU C++ - z gcc 3.3.5, potrzebna dla
-kompatybilno¶ci z niektórymi starymi programami w C++.
+kompatybilnoÅ›ci z niektÃ³rymi starymi programami w C++.
 
 
 %prep
