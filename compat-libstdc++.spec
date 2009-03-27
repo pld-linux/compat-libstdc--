@@ -2,7 +2,7 @@ Summary:	Old versions of GNU C++ library
 Summary(pl.UTF-8):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat.tar.gz
@@ -233,18 +233,21 @@ rm -rf $RPM_BUILD_ROOT
 %files -n compat-libg++-2.7
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libg++.so.2.7.2.8
+%attr(755,root,root) %ghost %{_libdir}/libg++.so.2.7.2
 %endif
 
 %ifarch alpha %{ix86}
 %files 2.7
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.7.2.8
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2.7.2
 %endif
 
 %ifarch alpha %{ix86} ppc sparc
 %files 2.8
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.8.0
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2
 %ifarch ppc
 %attr(755,root,root) %{_libdir}/libstdc++.so.27
 %endif
@@ -254,11 +257,14 @@ rm -rf $RPM_BUILD_ROOT
 %files 2.9
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++-2-libc6.1-1-2.9.0.so
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-2-libc6.1-1-2.9.0.so.2
 %ifarch alpha sparc
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.9.0
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2
 %endif
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.9.dummy
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2.9
 %endif
 %endif
 
@@ -267,9 +273,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so.3
 %endif 
 %ifarch ppc
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so.3
 %attr(755,root,root) %{_libdir}/libstdc++-libc6.1-2.so.3
 %endif
 %endif
@@ -279,9 +287,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %ifarch alpha
 %attr(755,root,root) %{_libdir}/libstdc++.so.3.0.2
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.3
 %endif
 %ifarch %{ix86} sparc
 %attr(755,root,root) %{_libdir}/libstdc++.so.3.0.4
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.3
 %endif
 %endif
 
@@ -289,10 +299,12 @@ rm -rf $RPM_BUILD_ROOT
 %files 3.1
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.4.0.1
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.4
 %endif
 
 %ifarch alpha %{x8664} %{ix86} ppc sparc
 %files 3.3
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.5.0.7
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.5
 %endif
