@@ -202,6 +202,8 @@ cp -a i386/* $RPM_BUILD_ROOT%{_libdir}
 cp -a ppc/* $RPM_BUILD_ROOT%{_libdir}
 %endif
 
+/sbin/ldconfig -n $RPM_BUILD_ROOT%{_libdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -247,7 +249,7 @@ rm -rf $RPM_BUILD_ROOT
 %files 2.8
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.8.0
-%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2.8
 %ifarch ppc
 %attr(755,root,root) %{_libdir}/libstdc++.so.27
 %endif
@@ -257,7 +259,7 @@ rm -rf $RPM_BUILD_ROOT
 %files 2.9
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++-2-libc6.1-1-2.9.0.so
-%attr(755,root,root) %ghost %{_libdir}/libstdc++-2-libc6.1-1-2.9.0.so.2
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.1-1.so.2
 %ifarch alpha sparc
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.9.0
 %attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2
@@ -273,12 +275,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so
-%attr(755,root,root) %ghost %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so.3
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.2-2.so.3
 %endif 
 %ifarch ppc
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so
-%attr(755,root,root) %ghost %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so.3
-%attr(755,root,root) %{_libdir}/libstdc++-libc6.1-2.so.3
+%attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.1-2.so.3
 %endif
 %endif
 
