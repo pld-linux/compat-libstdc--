@@ -262,7 +262,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.1-1.so.2
 %ifarch alpha sparc
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.9.0
-%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.2.9
 %endif
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++.so.2.9.dummy
