@@ -7,6 +7,7 @@ License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat.tar.gz
 # Source0-md5:	98ab37235f8cf0d20251716dabd40690
+BuildRequires:	/sbin/ldconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -276,7 +277,7 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.2-2-2.10.0.so
 %attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.2-2.so.3
-%endif 
+%endif
 %ifarch ppc
 %attr(755,root,root) %{_libdir}/libstdc++-3-libc6.1-2-2.10.0.so
 %attr(755,root,root) %ghost %{_libdir}/libstdc++-libc6.1-2.so.3
