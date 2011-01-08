@@ -12,6 +12,8 @@ BuildRequires:	rpmbuild(macros) >= 1.213
 ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		no_install_post_check_so	1
+
 %description
 This is the GNU implementation of the standard C++ libraries, along
 with additional GNU tools. This package includes the compatibility
