@@ -2,11 +2,11 @@ Summary:	Old versions of GNU C++ library
 Summary(pl.UTF-8):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	3.3
-Release:	7
+Release:	8
 License:	GPL
 Group:		Libraries
-Source0:	libstdc++-compat.tar.gz
-# Source0-md5:	98ab37235f8cf0d20251716dabd40690
+Source0:	http://carme.pld-linux.org/~glen/libstdc++-compat-3.3.6-9.tar.bz2
+# Source0-md5:	5ff9f6f8250c600c8fc555d5ea1d950f
 BuildRequires:	/sbin/ldconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
@@ -165,17 +165,17 @@ kompatybilności z niektórymi starymi programami w C++.
 %package 3.3
 Summary:	Old version of GNU C++ library - gcc 3.3
 Summary(pl.UTF-8):	Stara wersja biblioteki GNU C++ - gcc 3.3
-Version:	3.3.5
+Version:	3.3.6
 Group:		Libraries
 Conflicts:	compat-libstdc++
 Conflicts:	libstdc++-compat
 
 %description 3.3
-Old, compatibility version of GNU C++ library - from gcc 3.3.5, needed
+Old, compatibility version of GNU C++ library - from gcc 3.3.6, needed
 to run some old C++ applications.
 
 %description 3.3 -l pl.UTF-8
-Stara wersja biblioteki GNU C++ - z gcc 3.3.5, potrzebna dla
+Stara wersja biblioteki GNU C++ - z gcc 3.3.6, potrzebna dla
 kompatybilności z niektórymi starymi programami w C++.
 
 %prep
