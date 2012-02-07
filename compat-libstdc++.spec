@@ -169,6 +169,10 @@ Version:	3.3.6
 Group:		Libraries
 Conflicts:	compat-libstdc++
 Conflicts:	libstdc++-compat
+%if "%{pld_release}" == "ac"
+Provides:	libstdc++ = 5:3.3.6-10
+Obsoletes:	libstdc++ < 5:3.3.6-10
+%endif
 
 %description 3.3
 Old, compatibility version of GNU C++ library - from gcc 3.3.6, needed
