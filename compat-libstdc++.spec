@@ -1,12 +1,12 @@
 Summary:	Old versions of GNU C++ library
 Summary(pl.UTF-8):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
-Version:	3.3
-Release:	8
+Version:	4.6
+Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://carme.pld-linux.org/~glen/libstdc++-compat-3.3.6-9.tar.bz2
-# Source0-md5:	5ff9f6f8250c600c8fc555d5ea1d950f
+Source0:	libstdc++-compat-%{version}.tar.bz2
+# Source0-md5:	6fd4b43281ced8c3511a10957b3a3f38
 BuildRequires:	/sbin/ldconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
@@ -182,6 +182,22 @@ to run some old C++ applications.
 Stara wersja biblioteki GNU C++ - z gcc 3.3.6, potrzebna dla
 kompatybilności z niektórymi starymi programami w C++.
 
+%package 4.6
+Summary:	Old version of GNU C++ library - gcc 4.6
+Summary(pl.UTF-8):	Stara wersja biblioteki GNU C++ - gcc 4.6
+Version:	4.6.3
+Group:		Libraries
+Conflicts:	compat-libstdc++
+Conflicts:	libstdc++-compat
+
+%description 4.6
+Old, compatibility version of GNU C++ library - from gcc 4.6.3, needed
+to run some old C++ applications.
+
+%description 4.6 -l pl.UTF-8
+Stara wersja biblioteki GNU C++ - z gcc 4.6.3, potrzebna dla
+kompatybilności z niektórymi starymi programami w C++.
+
 %prep
 %setup -q -n libstdc++-compat
 
@@ -202,7 +218,7 @@ cp -a sparc/* $RPM_BUILD_ROOT%{_libdir}
 %endif
 
 %ifarch %{ix86}
-cp -a i386/* $RPM_BUILD_ROOT%{_libdir}
+cp -a i[34]86/* $RPM_BUILD_ROOT%{_libdir}
 %endif
 
 %ifarch ppc
@@ -237,6 +253,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	3.3 -p /sbin/ldconfig
 %postun	3.3 -p /sbin/ldconfig
+
+%post	4.6 -p /sbin/ldconfig
+%postun	4.6 -p /sbin/ldconfig
 
 %ifarch alpha %{ix86}
 %files -n compat-libg++-2.7
@@ -315,4 +334,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.5.0.7
 %attr(755,root,root) %ghost %{_libdir}/libstdc++.so.5
+%endif
+
+%ifarch %{x8664} %{ix86}
+%files 4.6
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libstdc++.so.6.0.16
+%attr(755,root,root) %ghost %{_libdir}/libstdc++.so.6
 %endif
