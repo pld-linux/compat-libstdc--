@@ -1,0 +1,2 @@
+- ldconfig in %install
+- fixed %ghost symlinks. tested on ix86. Please test it on other archs
