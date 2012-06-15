@@ -2,7 +2,7 @@ Summary:	Old versions of GNU C++ library
 Summary(pl.UTF-8):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	4.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat-%{version}.tar.bz2
@@ -189,6 +189,8 @@ Version:	4.6.3
 Group:		Libraries
 Conflicts:	compat-libstdc++
 Conflicts:	libstdc++-compat
+Provides:	libstdc++ = 6:4.6.3-5
+Obsoletes:	libstdc++ < 6:4.6.3-5
 
 %description 4.6
 Old, compatibility version of GNU C++ library - from gcc 4.6.3, needed
