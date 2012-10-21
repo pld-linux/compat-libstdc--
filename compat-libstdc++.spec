@@ -2,7 +2,7 @@ Summary:	Old versions of GNU C++ library
 Summary(pl.UTF-8):	Stare wersje bibliotek GNU C++
 Name:		compat-libstdc++
 Version:	4.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	libstdc++-compat-%{version}.tar.bz2
@@ -13,7 +13,7 @@ ExclusiveArch:	%{x8664} %{ix86} alpha ppc sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_check_so	1
-%define		_enable_debug_packages	0
+%define		_enable_debug_packages		0
 
 %description
 This is the GNU implementation of the standard C++ libraries, along
@@ -338,9 +338,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libstdc++.so.5
 %endif
 
+%if "%{pld_release}" != "th"
 %ifarch %{x8664} %{ix86}
 %files 4.6
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libstdc++.so.6.0.16
 %attr(755,root,root) %ghost %{_libdir}/libstdc++.so.6
+%endif
 %endif
